@@ -8,6 +8,6 @@ fn main() {
             "proto/googleapis",
             "grpc"
         ],
-    )
-    .expect("failed to compile the proto files");
+    ).unwrap_or_else(|e| panic!("failed to compile the proto files: {}", e));
 }
+
