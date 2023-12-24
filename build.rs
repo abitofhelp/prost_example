@@ -5,6 +5,7 @@ fn main() {
 
     prost_build::compile_protos(
         &protos,
+        // The directories under which protoc should look for dependencies in the proto file.
         &[
             "proto/helloworld",
             "proto/googleapis",
