@@ -1,13 +1,20 @@
 extern crate prost_build;
 
 fn main() {
+    let protos = vec!["proto/helloworld/helloworld.proto"];
+
     prost_build::compile_protos(
-        &["proto/helloworld/helloworld.proto"],
+        &protos,
         &[
             "proto/helloworld",
             "proto/googleapis",
             "grpc"
         ],
     ).unwrap_or_else(|e| panic!("failed to compile the proto files: {}", e));
+
+    // Recompile protobufs only if any of the proto files changes.
+    for proto in protos {
+        println!("cargo:rerun-if-changed={}", proto);
+    }
 }
 
