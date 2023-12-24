@@ -2,6 +2,7 @@
 
 This repository contains an example application demonstrating how to use Prost.
 
-* Rust 
-* Protobuf 
+* Rust
 * GoogleApis
+* Prost
+* Protobuf
