@@ -1,0 +1,23 @@
+[package]
+authors = ["Michael Gardner <mjgardner@abitofhelp.com>"]
+description = "This is an example application using the latest versions of ..."
+edition = "2021"
+homepage = "https://www.abitofhelp.com"
+keywords = ["rust", "protobuf"]
+license-file = "LICENSE"
+name = "prost_example"
+readme = "README.md"
+repository = "https://github.com/abitofhelp/prost_example.git"
+rust-version = "1.76"
+version = "1.0.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+prost = { version = "0.12.3", features = ["prost-derive"] }
+# Only necessary if using Protobuf well-known types.
+prost-types = "0.12.3"
+bytes = "1.5.0"
+
+[build-dependencies]
+prost-build = { version = "0.12.3" }
