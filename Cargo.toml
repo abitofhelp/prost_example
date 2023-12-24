@@ -13,6 +13,10 @@ version = "1.0.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]] # Bin to run the HelloWorld gRPC server
+name = "prost_example"
+path = "src/main.rs"
+
 [dependencies]
 # Only necessary if using Protobuf well-known types.
 bytes = "1.5.0"
